@@ -9,7 +9,7 @@ en:	clean xelatex resume.tex
 zh_CN:	clean xelatex resume-zh_CN.tex
 
 wuyaxu:
-	xelatex wuyaxu-resume.tex
+	gpg -d --output avatar.jpg myself_smaller.JPG.gpg && xelatex wuyaxu-resume.tex
 
 pdf:	clean $(PDFS)
 
@@ -25,4 +25,4 @@ else
 endif
 
 clean:
-	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf *.jpg
